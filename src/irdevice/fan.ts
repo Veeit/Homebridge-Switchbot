@@ -127,15 +127,9 @@ export class Fan {
     this.debugLog(`${this.device.remoteType}: ${this.accessory.displayName} SwingMode: ${value}`);
     if (value > this.SwingMode) {
       this.SwingMode = 1;
-      if (this.onOffToggle == false) {
-        this.pushFanOnChanges();
-      }
       await this.pushFanSwingChanges();
     } else {
       this.SwingMode = 0;
-      if (this.onOffToggle == false) {
-        this.pushFanOnChanges();
-      }
       await this.pushFanSwingChanges();
     }
     this.SwingMode = value;
@@ -147,9 +141,6 @@ export class Fan {
     if (value > this.RotationSpeed) {
       this.RotationSpeed = 1;
       this.pushFanSpeedUpChanges();
-      if (this.onOffToggle == false) {
-        this.pushFanOnChanges();
-      }
     } else {
       this.RotationSpeed = 0;
       this.pushFanSpeedDownChanges();
