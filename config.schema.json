@@ -1032,6 +1032,14 @@
                       "placeholder": "100",
                       "condition": {
                         "functionBody": "return (model.options && model.options.irdevices && !model.options.irdevices[arrayIndices].hide_device && (model.options.irdevices[arrayIndices].configRemoteType === 'Fan' || model.options.irdevices[arrayIndices].configRemoteType === 'DIY Fan') && model.options.irdevices[arrayIndices].deviceId && model.options.irdevices[arrayIndices].irfan  && !model.options.irdevices[arrayIndices].irfan.rotation_speed);"
+                      },
+                      "on_off_toggle": {
+                        "title": "Set on off buttons to toggle",
+                        "type": "boolean",
+                        "placeholder": "false",
+                        "condition": {
+                          "functionBody": "return (model.options && model.options.irdevices && !model.options.irdevices[arrayIndices].hide_device && (model.options.irdevices[arrayIndices].configRemoteType === 'Fan' || model.options.irdevices[arrayIndices].configRemoteType === 'DIY Fan') && model.options.irdevices[arrayIndices].deviceId && model.options.irdevices[arrayIndices].irfan  && !model.options.irdevices[arrayIndices].irfan.rotation_speed);"
+                        }
                       }
                     }
                   }
